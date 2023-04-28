@@ -18,12 +18,12 @@ import java.util.List;
 @LoadBalancerClient
 public interface ContactFeignClient {
 
-    @PostMapping("/findByIdsF")
+    @PostMapping("/contact/findByIdsF")
     public List<ContactResponseBean> findAllByIds(@RequestBody List<Long> contactIds);
 
-    @PostMapping("/saveContact")
+    @PostMapping("/contact/saveContact")
     public List<ContactResponseBean> saveContact(@RequestBody List<ContactRequestBean> contacts);
 
-    @GetMapping("/getAllContacts")
+    @GetMapping("/contact/getAllContacts")
     public List<ContactResponseBean> getAllContacts();
 }
